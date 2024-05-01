@@ -1,17 +1,18 @@
 package lesson_1
 
+const val SOME_PER_SOME = 60
+
 fun main() {
     val seconds = 6480
-    // Количество секунд в одном часе
-    val secondsPerHour = 3600
-    // Остаток секунд после вычитания одного часа
+    val secondsPerHour = SOME_PER_SOME * SOME_PER_SOME
     val remainderOfSeconds = seconds - secondsPerHour
-    // Вычисление полных часов
-    var fullHour = secondsPerHour / secondsPerHour
-    // Вычисление остатка полных минут
-    var fullMinute = remainderOfSeconds / 60
-    // Вычисление остатка полных секунд
-    var fullSecond = remainderOfSeconds % 60
+    val fullHour = secondsPerHour / secondsPerHour
+    val fullMinute = remainderOfSeconds / SOME_PER_SOME
+    val fullSecond = remainderOfSeconds % SOME_PER_SOME
 
-    println("0$fullHour:$fullMinute:0$fullSecond")
+    println(formatTime(fullHour, fullMinute, fullSecond))
+}
+
+fun formatTime(fullHour: Int, fullMinute: Int, fullSecond: Int): String {
+    return String.format("%02d:%02d:%02d", fullHour, fullMinute, fullSecond)
 }
