@@ -12,7 +12,7 @@ fun main() {
         "Груз весом ${cargo1Weight} кг и объемом ${cargo1Volume} л соответствует категории 'Average':" +
                 "${cargo1Weight >= averageWeightFrom && cargo1Weight <= averageWeightTo &&
                         cargo1Volume < averageVolume}\nГруз весом ${cargo2Weight} кг и объемом ${cargo2Volume}" +
-                "соответствует категории 'Average':${cargo2Weight >= averageWeightFrom && cargo2Weight <= averageWeightTo
+                " л соответствует категории 'Average':${cargo2Weight >= averageWeightFrom && cargo2Weight <= averageWeightTo
                         && cargo2Volume < averageVolume}"
     )
 }
