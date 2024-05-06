@@ -5,18 +5,23 @@ fun main() {
     var abdominal = true
     var legs = true
     var back = true
+    var isEven = false
     var trainigDay = 2
 
     if (trainigDay % 2 == 0) {
-        legs = true
-        back = true
-        arms = false
-        abdominal = false
-    } else {
-        legs = false
-        back = false
+        isEven = true
+    }
+
+    if (!isEven) {
         arms = true
         abdominal = true
+        back = false
+        legs = false
+    } else {
+        arms = false
+        abdominal = false
+        back = true
+        legs = true
     }
 
     println(
