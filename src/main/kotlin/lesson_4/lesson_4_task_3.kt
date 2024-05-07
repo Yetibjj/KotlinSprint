@@ -11,19 +11,17 @@ fun main() {
     val isWeatherToday = true
     val isAwningOpened = true
     val airHumidity = 20
-    val season = "summer"
-    var isConditions = false
-
-
-    if (
+    val season = SEASON
+    val isConditions = if (
         isWeatherToday == IS_SUNNY_WEATHER &&
         isAwningOpened == IS_AWNING_OPENED &&
         airHumidity == AIR_HUMIDITY &&
         season != SEASON
-        ) {
-        isConditions = true
+    ) {
+        true
     } else {
-        isConditions = false
+        false
     }
+
     println(isConditions)
 }
