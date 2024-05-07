@@ -1,22 +1,29 @@
 package lesson_4
 
+const val RECOMMENDED_CREW_MIN = 55
+const val RECOMMENDED_CREW_MAX = 70
+const val RECOMMENDED_SUPPLY = 50
+
 fun main() {
     println("Корабль повреждён?(true/false):")
-    val damage = readln().toBoolean()
+    val isDamaged = readln().toBoolean()
     println("Введи количество экипажа:")
     val crewCount = readln().toInt()
     println("Введи количество ящиков с провизией:")
     val supply = readln().toInt()
     println("Погода благоприятная?(true/false):")
     val weather = readln().toBoolean()
-    var goToSea = ""
-
-    if (!damage && (crewCount in 55..70) && supply >= 50 && weather) {
-        goToSea = "Можно отплывать!"
-    } else if (damage && (crewCount == 70) && supply >= 50 && weather) {
-        goToSea = "Можно отплывать!"
+    val goToSea = if (
+        !isDamaged &&
+        (crewCount in RECOMMENDED_CREW_MIN..RECOMMENDED_CREW_MAX) &&
+        supply >= RECOMMENDED_SUPPLY && weather ||
+        isDamaged &&
+        (crewCount == RECOMMENDED_CREW_MAX) &&
+        supply >= RECOMMENDED_SUPPLY && weather){
+        "Можно отплывать!"
     } else {
-        goToSea = "Отплывать нельзя:("
+        "Отплывать нельзя:("
     }
+
     println(goToSea)
 }
