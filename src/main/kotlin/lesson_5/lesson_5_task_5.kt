@@ -20,7 +20,6 @@ fun main() {
     val userListNumbers = mutableListOf(userNumber1, userNumber2, userNumber3)
     val result = luckyListNumbers.intersect(userListNumbers)
 
-    println(result.count())
 
     if (result.count() == 3 ) {
         println("Вы угадали все числа! Джекпот ваш!")
