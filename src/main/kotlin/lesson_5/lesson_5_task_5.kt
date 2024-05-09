@@ -1,11 +1,11 @@
 package lesson_5
 
-import kotlin.random.Random
-
 fun main() {
-    val luckyNumber1 = Random.nextInt(0, 49)
-    val luckyNumber2 = Random.nextInt(0, 49)
-    val luckyNumber3 = Random.nextInt(0, 49)
+    val luckyNumber1 = (0..42).random()
+    val luckyNumber2 = (0..42).random()
+    val luckyNumber3 = (0..42).random()
+
+
     val luckyListNumbers = listOf(luckyNumber1, luckyNumber2, luckyNumber3)
 
     println("Введите первое число:")
